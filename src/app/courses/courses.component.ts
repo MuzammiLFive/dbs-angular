@@ -11,4 +11,8 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input('data') course;
+
+  enroll(name: string) {
+    console.log(`you have enrolled for ${name}`);
+  }
 }
