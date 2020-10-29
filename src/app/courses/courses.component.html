@@ -13,12 +13,18 @@
         {{ course.price }}
       </li>
     </ul>
+    <a href="#" class="btn btn-info">Details</a>
     <a
-      href="#"
-      class="btn"
-      [class]="course.students > 10 ? 'btn-primary' : 'btn-secondary'"
-      >Details</a
+      class="btn btn-primary"
+      [class]="
+        course.students > 20
+          ? 'btn-secondary disabled'
+          : course.students > 10
+          ? 'btn-warning'
+          : 'btn-primary'
+      "
+      (click)="enroll(course)"
+      >Enroll</a
     >
-    <a class="btn btn-primary" (click)="enroll(course.name)">Enroll</a>
   </div>
 </div>

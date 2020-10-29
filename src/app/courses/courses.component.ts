@@ -12,7 +12,8 @@ export class CoursesComponent implements OnInit {
 
   @Input('data') course;
 
-  enroll(name: string) {
-    console.log(`you have enrolled for ${name}`);
+  enroll(course) {
+    console.log(`Enrolled: ${course.students}`);
+    course.students++;
   }
 }
